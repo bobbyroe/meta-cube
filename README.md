@@ -1,41 +1,23 @@
-# Three.js WebGPU Template
+# Meta Cube with Three.js & WebGPU
 
-A simple JavaScript project using Three.js with WebGPU. Includes a torus knot with orbit controls and a background sprite layer.
+A real-time 3D graphics tutorial video on YouTube, demoing how to create an interactive 3D scene using THREE.js with WebGPU, featuring instanced meshes, dynamic noise-based transformations, and more.
 
 ![image](./meta-cube.png)
 
 ## Features
-- **Three.js**: Uses the WebGPU renderer for better performance.
-- **Orbit Controls**: Allows user interaction via mouse movement.
-- **Hemisphere Lighting**: Adds a basic lighting setup.
-- **Background Sprites**: Uses `getLayer.js` to add background sprite effects.
+- **Instanced Meshes**: Renders a grid of cubes using `THREE.InstancedMesh` for efficient rendering.
+- **Dynamic Transformations**: Applies noise functions to scale each cube dynamically and adjusts their colors based on noise.
+- **WebGPU Rendering**: Uses the `WebGPURenderer` for high-performance rendering.
+- **Sprites Layer**: Adds a background layer of sprites using a custom helper module (`libs/getLayer.js`).
+- **Responsive**: Automatically adjusts the renderer and camera aspect ratio on window resize.
 
 ## Installation
 Ensure you have a local development server (such as `live-server` or `http-server`) to serve your files.
 
 ```sh
 # Clone the repository
-git clone https://github.com/bobbyroe/threejs-webgpu-template.git
-cd threejs-webgpu-template
-```
-
-## Usage
-Run a local server to serve the project:
-
-```sh
-npx http-server
-```
-or fire up Live Server
-
-Then open `http://localhost:8080` (or the appropriate URL) in your browser.
-
-## File Structure
-```
-/
-├── index.html          # Main HTML file
-├── main.js             # Main JavaScript file (Three.js setup)
-├── libs/
-│   ├── getLayer.js     # Helper function for background sprites
+git clone https://github.com/bobbyroe/meta-cube.git
+cd meta-cube
 ```
 
 ## Dependencies
@@ -47,4 +29,3 @@ Modify `main.js` to experiment with different Three.js objects, materials, or ef
 
 ## License
 This project is licensed under the MIT License. Feel free to modify and distribute.
-
