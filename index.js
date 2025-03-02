@@ -4,16 +4,12 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { ImprovedNoise } from "three/addons/math/ImprovedNoise.js";
 import getLayer from "./libs/getLayer.js";
 
-// add a ? and a value (20, 30, 40, etc...) to the url to change the amount of cubes
-// example: http://localhost:3000/noiseGrid-03/?20
-const urlAmount = parseInt(window.location.search.slice(1));
-const amount = urlAmount || 10;
+const amount = 20;
 const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 100);
-camera.position.set(amount * 1.1, amount * 1.1, amount * 1.1);
-camera.lookAt(0, 0, 0);
+camera.position.z = amount * 1.8;
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x101010);
+scene.background = new THREE.Color(0x000000);
 const renderer = new THREE.WebGPURenderer({ antialias: true });
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -27,7 +23,6 @@ const count = Math.pow(amount, 3);
 const dummy = new THREE.Object3D();
 
 const material = new THREE.MeshBasicMaterial();
-
 const size = 0.5;
 const geometry = new THREE.BoxGeometry(size, size, size);
 const mesh = new THREE.InstancedMesh(geometry, material, count);
