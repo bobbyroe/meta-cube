@@ -5,7 +5,7 @@ A real-time 3D graphics tutorial video on YouTube, demoing how to create an inte
 ![image](./meta-cube.png)
 
 ## Features
-- **Instanced Meshes**: Renders a grid of cubes using `THREE.InstancedMesh` for efficient rendering.
+- **Instanced Mesh**: Renders a grid of cubes using `THREE.InstancedMesh` for efficient rendering.
 - **Dynamic Transformations**: Applies noise functions to scale each cube dynamically and adjusts their colors based on noise.
 - **WebGPU Rendering**: Uses the `WebGPURenderer` for high-performance rendering.
 - **Sprites Layer**: Adds a background layer of sprites using a custom helper module (`libs/getLayer.js`).
